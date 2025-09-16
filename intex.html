@@ -1,8 +1,50 @@
 
 <html>
+	<head>
+		<script type="text/javascript">
+		function notificacion() {
+			inputnombre=document.getElementById("nombre");
+			nombre=inputnombre.value;
+			alert("Hola "+nombre+"!");
+				}
+		</script>
+		<script>
+			function cambiarColor() {
+				divParrafo=document.getElementById("parrafo");
+				color=document.getElementById("colorActual").value;
+				if(color=="black") {
+					divParrafo.style.color="blue";
+					document.getElementById("colorActual").value="blue"
+					} else {
+						divParrafo.style.color="black";
+						document.getElementById("colorActual").value="black"
+						}
+			}
+		</script>
+		<script>
+			function cambiarVisibilidad() {
+				divParrafo=document.getElementById("parrafo");
+				if(divParrafo.style.display=="none") {
+					divParrafo.style.display="block";
+					} else {
+						divParrafo.style.display="none";
+						}
+						}
+		</script>
+	</head>
 	<body>
+		<div id="parrafo">
+			<p>esto vamos a esconder a ver si sale por favor Salio jeje</p>
+		</div>
+		<input type="button" value="Esconder" onclick="cambiarVisibilidad()"/>
+		<input type="button" value="Cambiar color" onclick="cambiarColor()"/>
+		<input type="hidden"value="negro" id="colorActual"/>
+		<input type="text" id="nombre" placeholder="Indique aqui su nombre"/>
+		<input type="button" value="Notificar" onclick="notificacion()"/>
 		<h1>Lucas Van Den Eng</h1>
 		<h2>Sitio de desarrollo para la materia ITIC</h2>
 		<h3>Facultad de Ciencias Económicas - Universidad de Buenos Aires</h3>
 	</body>
 </html>
+<input type="button" value="Boton Nuevo" onclick="alert('Boton de prueba')"/>
+
